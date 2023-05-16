@@ -53,7 +53,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
         })
 
-        /*adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
+        adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
 
             override fun onItemClick(position: Int) {
                 val intent = Intent(activity!!.applicationContext, ArticleFragment::class.java)
@@ -63,10 +63,10 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
                     .commit()
             }
 
-        })*/
+        })
     }
 
-    override fun onAttachFragment(childFragment: Fragment) {
+    /*override fun onAttachFragment(childFragment: Fragment) {
         super.onAttachFragment(childFragment)
 
         adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
@@ -80,7 +80,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
             }
 
         })
-    }
+    }*/
 
     /*override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
