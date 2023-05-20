@@ -1,7 +1,5 @@
 package com.example.newsfetcher.feature.mainscreen
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,7 +11,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsfetcher.R
-import com.example.newsfetcher.feature.article.ui.ArticleFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
@@ -56,47 +53,11 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
 
             override fun onItemClick(position: Int) {
-                val intent = Intent(activity!!.applicationContext, ArticleFragment::class.java)
-                intent.putExtra("position", position.toString())
 
-                parentFragmentManager.beginTransaction().replace(android.R.id.content, ArticleFragment())
-                    .commit()
             }
 
         })
     }
-
-    /*override fun onAttachFragment(childFragment: Fragment) {
-        super.onAttachFragment(childFragment)
-
-        adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
-
-            override fun onItemClick(position: Int) {
-                val intent = Intent(activity!!.applicationContext, ArticleFragment::class.java)
-                intent.putExtra("position", position.toString())
-
-                parentFragmentManager.beginTransaction().replace(android.R.id.content, ArticleFragment())
-                    .commit()
-            }
-
-        })
-    }*/
-
-    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
-
-            override fun onItemClick(position: Int) {
-                val intent = Intent(activity!!.applicationContext, ArticleFragment::class.java)
-                intent.putExtra("position", position.toString())
-
-                parentFragmentManager.beginTransaction().replace(android.R.id.content, ArticleFragment())
-                    .commit()
-            }
-
-        })
-    }*/
 
     private fun render(viewState: ViewState) {
         tvTitle.isVisible = !viewState.isSearchEnabled

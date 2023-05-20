@@ -7,7 +7,7 @@ import com.example.newsfetcher.feature.bookmarks.ui.BookmarksFragment
 import com.example.newsfetcher.feature.mainscreen.MainScreenFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+public class MainActivity : AppCompatActivity() {
 
     private val bottomNavigationMenu: BottomNavigationView by lazy { findViewById(R.id.bnvBar) }
 
