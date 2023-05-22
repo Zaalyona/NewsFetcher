@@ -1,6 +1,7 @@
 package com.example.newsfetcher
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.newsfetcher.di.databaseModul
 import com.example.newsfetcher.di.networkModule
 import com.example.newsfetcher.feature.bookmarks.di.bookmarksModule
@@ -19,5 +20,7 @@ class App : Application() {
             androidContext(this@App)
             modules(networkModule, mainScreenModule, bookmarksModule, databaseModul)
         }
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     }
 }

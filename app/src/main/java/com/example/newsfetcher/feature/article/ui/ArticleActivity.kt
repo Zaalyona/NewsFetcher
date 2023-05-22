@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.newsfetcher.R
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.newsfetcher.MainActivity
 import com.example.newsfetcher.feature.mainscreen.ArticlesAdapter

@@ -17,7 +17,7 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="@color/design_default_color_primary_dark"
+            app:contentScrim="?colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -31,7 +31,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="90dp"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
                 app:contentInsetStartWithNavigation="0dp"
@@ -44,10 +44,12 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="Заголовок"
-                    android:textAlignment="center"
-                    android:textColor="@color/design_default_color_secondary_variant"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    style="@style/BoldText.DescriptionExpandedShadowed"
+                    android:textSize="24sp"
+                    android:textColor="?colorAccented"
+                    android:textAlignment="center" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -66,8 +68,8 @@
             android:id="@+id/tvArticleDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/BoldText.DescriptionExpanded"
+            android:textColor="?colorAccented"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:text="Новость" />

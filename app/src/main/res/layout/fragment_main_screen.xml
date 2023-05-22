@@ -10,7 +10,7 @@
         android:layout_height="56dp"
         android:orientation="horizontal"
         android:elevation="5dp"
-        android:background="@color/white"
+        android:background="?colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toStartOf="@id/ivSearch"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/ivSearch"
-            android:textSize="16sp"
+            style="@style/BoldText.DescriptionExpandedShadowed"
             android:text="@string/app_name"
             />
 
