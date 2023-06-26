@@ -5,6 +5,7 @@ import com.example.newsfetcher.feature.data.model.ArticlesRemoteModel
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.example.newsfetcher.di.API_KEY
+import com.example.newsfetcher.json.UserModel
 import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -19,8 +20,12 @@ interface NewsApi {
     ) : ArticlesRemoteModel
 
     //Формирование запроса
-    @POST("v2/top-headlines")
+    /*@POST("v2/top-headlines")
     suspend fun postArticles(
         @Body sampleModel: SampleModel = SampleModel("ru", 5, listOf("123", "1234567"))
-    ) : ArticlesRemoteModel
+    ) : ArticlesRemoteModel*/
+
+    @POST("v2/top-headlines")
+    suspend fun postArticles(
+        @Body userModel: UserModel) : UserModel
 }

@@ -3,7 +3,7 @@ package com.example.newsfetcher.feature.di
 import com.example.newsfetcher.feature.data.ArticlesRemoteSource
 import com.example.newsfetcher.feature.data.ArticlesRepository
 import com.example.newsfetcher.feature.data.NewsApi
-import com.example.newsfetcher.feature.data.model.ArticlesRepositoryImpl
+import com.example.newsfetcher.feature.data.ArticlesRepositoryImpl
 import com.example.newsfetcher.feature.domain.ArticlesInteractor
 import com.example.newsfetcher.feature.mainscreen.MainScreenViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
