@@ -23,7 +23,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
     private val adapter: ArticlesAdapter by lazy {
         ArticlesAdapter { index ->
-            viewModel.processUiEvent(UiEvent.OnArticleClicked(index))
+            viewModel.processUiEvent(UiEvent.OnArticleClicked(this))
         }
     }
 
@@ -51,19 +51,25 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         })
 
         adapter.setOnItemClickListener(object : ArticlesAdapter.onItemClickListener {
-
             override fun onItemClick(position: Int) {
 
             }
-
         })
     }
 
     private fun render(viewState: ViewState) {
-        tvTitle.isVisible = !viewState.isSearchEnabled
-        etSearch.isVisible = viewState.isSearchEnabled
-        adapter.setData(viewState.articlesShown)
+        when (viewState.state) {
+            State.Load -> {
+
+            }
+            State.Content -> {
+                tvTitle.isVisible = !viewState.isSearchEnabled
+                etSearch.isVisible = viewState.isSearchEnabled
+                adapter.setData(viewState.articlesShown)
+            }
+            State.Error -> {
+
+            }
+        }
     }
-
-
 }
